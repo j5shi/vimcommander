@@ -86,6 +86,7 @@ noremap <silent> <unique> <Plug>VimCommanderToggle                 :cal VimComma
 fu! <SID>CommanderMappings()
 	map <silent> <buffer> <LeftRelease>    <Plug>VimCommanderOnClick
 	map <silent> <buffer> <Insert>         <Plug>VimCommanderSelect
+	map <silent> <buffer> <Space>          <Plug>VimCommanderSelect
 	map <silent> <buffer> <LeftRelease>    <Plug>VimCommanderOnClick
 	map <silent> <buffer> <2-LeftMouse>    <Plug>VimCommanderSwitchOnDoubleClick
 	map <silent> <buffer> <CR>             <Plug>VimCommanderSwitchOnDoubleClick
@@ -95,12 +96,13 @@ fu! <SID>CommanderMappings()
 	map <silent> <buffer> <S-Up>           <Plug>VimCommanderGotoPrevNode
 	map <silent> <buffer> <BS>             <Plug>VimCommanderBuildParentTree
 
-	"total-cmd keys:
+	" total-cmd keys:
 	map <silent> <buffer> <TAB>            <Plug>VimCommanderSwitchBuffer
 	map <silent> <buffer> <C-\>            <Plug>VimCommanderBuildTreeHome
 	map <silent> <buffer> <C-/>            <Plug>VimCommanderBuildTreeRoot
 	map <silent> <buffer> <leader>/        <Plug>VimCommanderBuildTreeRoot
-	"F-keys and aliases:
+
+	" F-keys and aliases:
 	map <silent> <buffer> <F3>             <Plug>VimCommanderFileView
 	map <silent> <buffer> <F4>             <Plug>VimCommanderFileEdit
 	map <silent> <buffer> <S-F4>           <Plug>VimCommanderFileEdit
@@ -115,7 +117,8 @@ fu! <SID>CommanderMappings()
 	map <silent> <buffer> <DEL>            <Plug>VimCommanderFileDelete
 	map <silent> <buffer> <F10>            <Plug>VimCommanderToggle
 	map <silent> <buffer> <F11>            <Plug>VimCommanderToggle
-	"Panel-dirs
+
+	" Panel-dirs
 	map <silent> <buffer> <leader><Left>   <Plug>VimCommanderGetOrPutDir_l
 	map <silent> <buffer> <leader><Right>  <Plug>VimCommanderGetOrPutDir_r
 	map <silent> <buffer> <C-Left>         <Plug>VimCommanderGetOrPutDir_l
@@ -129,7 +132,8 @@ fu! <SID>CommanderMappings()
 	map <silent> <buffer> <C-R>            <Plug>VimCommanderRefreshDisplays
 	map <silent> <buffer> <leader>r        <Plug>VimCommanderRefreshDisplays
 	map <silent> <buffer> <leader>h        <Plug>VimCommanderShowHiddenFilesToggle
-	"File-selection
+
+	" File-selection
 	map <silent> <buffer> <C-kPlus>        <Plug>VimCommanderSelectPattern
 	map <silent> <buffer> <leader><kPlus>  <Plug>VimCommanderSelectPattern
 	map <silent> <buffer> <leader><kMinus> <Plug>VimCommanderDeSelectPattern
@@ -137,23 +141,24 @@ fu! <SID>CommanderMappings()
 	map <silent> <buffer> <kMinus>         <Plug>VimCommanderDeSelectPatternAsk
 	map <silent> <buffer> +                <Plug>VimCommanderSelectPatternAsk
 	map <silent> <buffer> -                <Plug>VimCommanderDeSelectPatternAsk
-	"Dir history
+
+	" Dir history
 	map <silent> <buffer> <C-t>            <Plug>VimCommanderPrevDir
 	map <silent> <buffer> <leader>t        <Plug>VimCommanderPrevDir
 	map <silent> <buffer> <C-y>            <Plug>VimCommanderNextDir
 	map <silent> <buffer> <leader>y        <Plug>VimCommanderNextDir
 
-	"Misc (some are Opsplorer's)
+	" Misc (some are Opsplorer's)
 	map <silent> <buffer> <C-F11>          <Plug>VimCommanderSetMatchPattern
 	map <silent> <buffer> <leader><F11>    <Plug>VimCommanderSetMatchPattern
 	"map <silent> <buffer> <C-O>            <Plug>VimCommanderToggle
 	"map <silent> <buffer> <leader>o        <Plug>VimCommanderToggle
 
-	"ChangeDir dialog, required in windows:
+	" ChangeDir dialog, required in windows:
 	map <silent> <buffer> <leader>c        <Plug>VimCommanderChangeDir
 	map <silent> <buffer> cd               <Plug>VimCommanderChangeDir
 
-	"Directory Up/Down
+	" Directory Up/Down
 	map <silent> <buffer> <C-PageUp>       <Plug>VimCommanderBuildParentTree
 	map <silent> <buffer> <C-PageDown>     <Plug>VimCommanderSwitchOnDoubleClick
 endf
